@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <p>A Gridsome app</p>
+    <p class="container" style="background: #f00">A Gridsome app</p>
   </Layout>
 </template>
 

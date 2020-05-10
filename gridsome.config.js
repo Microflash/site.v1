@@ -76,8 +76,8 @@ module.exports = {
     config.module.rule('svg')
       .test(/\.svg$/).use('vue').loader('vue-loader').end()
       .use('svg-to-vue-component').loader('svg-to-vue-component/loader')
-    config.plugin('critical').use(new Critters({
-      preload: 'swap'
-    }))
+    // config.plugin('critical').use(new Critters({
+    //   preload: 'swap'
+    // }))
   }
 }

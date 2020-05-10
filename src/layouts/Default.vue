@@ -1,5 +1,16 @@
 <template>
   <div class="layout">
-    <slot></slot>
+    <Header />
+    <!-- <slot></slot> -->
   </div>
 </template>
+
+<script>
+import Header from './partials/Header'
+
+export default {
+  components: {
+    Header
+  }
+}
+</script>

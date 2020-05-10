@@ -12,14 +12,59 @@ $weight-rg: 400 !default;
 $weight-md: 600 !default;
 $weight-lg: 700 !default;
 
+$font-sm: calc(0.8rem + 0.2vw) !default;
+$font-rg: calc(1rem + 0.2vw) !default;
+$font-md: calc(1.0625rem + 0.5vw) !default;
+$font-xl: calc(1.5rem + 1.5vw) !default;
+
+// Spacing
+
+$breakpoint-sm: 600px !default;
+$breakpoint-md: 900px !default;
+$breakpoint-lg: 1200px !default;
+$breakpoint-xl: 1800px !default;
+
+$container-offset: 35vw !default;
+
+$gap-xs: 0.5rem !default;
+$gap-sm: 0.75rem !default;
+$gap-rg: 1rem !default;
+$gap-md: 1.25rem !default;
+$gap-lg: 1.5rem !default;
+
+$gap: $gap-rg !default;
+
+$icon-sm: 1rem !default;
+$icon-rg: 1.5rem !default;
+
+// Display
+
+$radius: 0.5rem !default;
+
+$symbol-external-link: '\02197' !default;
+$symbol-reference-link: '#' !default;
+$symbol-separator: '\2758' !default;
+
 // Colors
 
 $text: var(--text) !default;
+$text-muted: var(--text-muted) !default;
+$text-vibrant: var(--text-vibrant) !default;
 
+$link: var(--link) !default;
+$link-vibrant: var(--link-vibrant) !default;
+
+$border: var(--border) !default;
+$border-vibrant: var(--border-vibrant) !default;
+
+$scrollbar: var(--scrollbar) !default;
 $selected: colors.fade(colors.primary(500), 0.75) !default;
 $code-selected: colors.fade(colors.primary(500), 0.91) !default;
 
 $bg: var(--bg) !default;
+$bg-muted: var(--bg-muted) !default;
+$bg-vibrant: var(--bg-vibrant) !default;
+$bg-glossy: var(--bg-glossy) !default;
 
 @use '../../../node_modules/@microflash/remarkability/scss/variables' with (
   $compact-lists: true,
@@ -38,28 +83,28 @@ $bg: var(--bg) !default;
   $family-code: ('JetBrains Mono', $family-code-native),
   $family-base-variable: ('Inter var', $family-sans-native),
   $weight-headings: $weight-md,
-  // $font-size-base: $font-rg,
+  $font-size-base: $font-rg,
   $background-body: $bg,
-  // $background-code: $bg-vibrant,
-  // $background-ins: $bg-muted,
-  // $background-mark: $bg-muted,
+  $background-code: $bg-vibrant,
+  $background-ins: $bg-muted,
+  $background-mark: $bg-muted,
   $background-table: inherit,
   $background-table-even: inherit,
-  // $background-table-hover: $bg-muted,
+  $background-table-hover: $bg-muted,
   $background-selected: $selected,
-  // $background-scrollbar: $bg-vibrant,
-  // $border-color: $border-vibrant,
-  // $radius: $radius,
+  $background-scrollbar: $bg-vibrant,
+  $border-color: $border-vibrant,
+  $radius: $radius,
   $text: $text,
   $text-code: inherit,
   $text-bold: inherit,
-  // $text-muted: $text-muted,
-  // $text-headings: $text-vibrant,
-  // $text-blockquote: $text-muted,
-  // $link: $link,
-  // $link-hover: $link-vibrant,
-  // $link-visited: $text-vibrant,
-  // $table-thead: $text-vibrant,
-  // $scrollbar: $scrollbar,
-  // $margin: $gap-lg
+  $text-muted: $text-muted,
+  $text-headings: $text-vibrant,
+  $text-blockquote: $text-muted,
+  $link: $link,
+  $link-hover: $link-vibrant,
+  $link-visited: $text-vibrant,
+  $table-thead: $text-vibrant,
+  $scrollbar: $scrollbar,
+  $margin: $gap-lg
 );

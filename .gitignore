@@ -2,3 +2,5 @@
 .temp
 .*cache
 node_modules
+public
+search.json

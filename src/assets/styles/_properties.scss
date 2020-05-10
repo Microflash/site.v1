@@ -1,0 +1,41 @@
+@use 'variables';
+@use 'mixins/queries';
+
+:root {
+  --max-width: initial;
+  --space: (1rem + 2vw);
+  --wrap-responsive: wrap;
+  --align-expanded: flex-start;
+  --gap-compressed: calc(var(--space));
+  --search-width: 100%;
+  --search-padding: calc(var(--space) * 1.4);
+  --search-alignment: 50%;
+  --radius-responsive: 0;
+}
+
+$space-sm: calc(var(--space) / 2) !default;
+$space-rg: calc(var(--space)) !default;
+$space-md: calc(var(--space) * 1.5) !default;
+$space-lg: calc(var(--space) * 2) !default;
+
+@include queries.md {
+  :root {
+    --max-width: calc(#{variables.$breakpoint-sm} + #{variables.$container-offset});
+    --wrap-responsive: nowrap;
+    --align-expanded: space-between;
+    --gap-compressed: #{$space-sm};
+    --search-padding: #{variables.$gap};
+    --search-width: calc(50% + var(--search-padding));
+    --search-alignment: 0;
+    --radius-responsive: #{variables.$radius};
+  }
+}
+
+$max-width: var(--max-width) !default;
+$gap-compressed: var(--gap-compressed) !default;
+$wrap-responsive: var(--wrap-responsive) !default;
+$align-expanded: var(--align-expanded) !default;
+$search-width: var(--search-width) !default;
+$search-padding: var(--search-padding) !default;
+$search-alignment: var(--search-alignment) !default;
+$radius-responsive: var(--radius-responsive) !default;

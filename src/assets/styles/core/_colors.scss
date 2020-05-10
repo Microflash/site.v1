@@ -85,12 +85,32 @@ $tertiary: (
 
 [data-theme='light'] {
   --text: #{shade(tertiary(900), 20%)};
+  --text-muted: #{tertiary(700)};
+  --text-vibrant: #{tertiary(700)};
+  --link: #{primary(700)};
+  --link-vibrant: #{primary(800)};
+  --border: #{fade($black, 0.9)};
+  --border-vibrant: #{fade($black, 0.7)};
+  --scrollbar: #{fade(tertiary(200), 0.3)};
   --bg: #{$white};
+  --bg-muted: #{tint(tertiary(100), 90%)};
+  --bg-vibrant: #{tint(tertiary(100), 70%)};
+  --bg-glossy: #{tint(tertiary(300), 55%)};
 }
 
 // CSS properties for dark theme
 
 [data-theme='dark'] {
   --text: #{shade($white, 20%)};
+  --text-muted: #{tertiary(600)};
+  --text-vibrant: #{shade(tertiary(100), 33%)};
+  --link: #{primary(600)};
+  --link-vibrant: #{primary(500)};
+  --border: #{fade($white, 0.95)};
+  --border-vibrant: #{fade($white, 0.75)};
+  --scrollbar: #{fade(secondary(900), 0.3)};
   --bg: #{shade(secondary(900), 60%)};
+  --bg-muted: #{shade(secondary(900), 55%)};
+  --bg-vibrant: #{shade(secondary(900), 66%)};
+  --bg-glossy: #{shade(secondary(900), 77%)};
 }

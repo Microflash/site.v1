@@ -1,0 +1,59 @@
+@use '../variables';
+@use '../properties';
+@use '../mixins/layout';
+
+// Container
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: auto;
+  max-width: properties.$max-width;
+  @include layout.px(properties.$space-rg);
+}
+
+// Icons
+
+.svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vertical-align: middle;
+  fill: currentColor;
+  fill-opacity: 0.3;
+}
+
+.icon {
+  @extend .svg;
+  stroke-width: 1.5px;
+  @include layout.size(variables.$icon-rg);
+}
+
+.icon-sm {
+  @extend .svg;
+  stroke-width: 2px;
+  @include layout.size(variables.$icon-sm);
+}
+
+// Spacing
+
+.is-sm {
+  @include layout.py(properties.$space-sm);
+}
+
+.is-md {
+  @include layout.py(properties.$space-md);
+}
+
+// Links
+
+.header {
+  a {
+    &:focus,
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

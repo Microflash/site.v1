@@ -1,0 +1,65 @@
+@use 'core/colors';
+
+// Typography
+
+$family-sans-native: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+  'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !default;
+$family-code-native: SFMono-Regular, 'Roboto Mono', Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace !default;
+
+$weight-rg: 400 !default;
+$weight-md: 600 !default;
+$weight-lg: 700 !default;
+
+// Colors
+
+$text: var(--text) !default;
+
+$selected: colors.fade(colors.primary(500), 0.75) !default;
+$code-selected: colors.fade(colors.primary(500), 0.91) !default;
+
+$bg: var(--bg) !default;
+
+@use '../../../node_modules/@microflash/remarkability/scss/variables' with (
+  $compact-lists: true,
+  $multiline-wrap: true,
+  $custom-selection: true,
+  $custom-scrollbar: true,
+  $custom-colors: true,
+  $custom-fonts: true,
+  $round-media: true,
+  $round-blocks: true,
+  $responsive-tables: true,
+  $hovered-links: true,
+  $variable-fonts: true,
+  $scroll-smoothly: true,
+  $family-base: (Inter, $family-sans-native),
+  $family-code: ('JetBrains Mono', $family-code-native),
+  $family-base-variable: ('Inter var', $family-sans-native),
+  $weight-headings: $weight-md,
+  // $font-size-base: $font-rg,
+  $background-body: $bg,
+  // $background-code: $bg-vibrant,
+  // $background-ins: $bg-muted,
+  // $background-mark: $bg-muted,
+  $background-table: inherit,
+  $background-table-even: inherit,
+  // $background-table-hover: $bg-muted,
+  $background-selected: $selected,
+  // $background-scrollbar: $bg-vibrant,
+  // $border-color: $border-vibrant,
+  // $radius: $radius,
+  $text: $text,
+  $text-code: inherit,
+  $text-bold: inherit,
+  // $text-muted: $text-muted,
+  // $text-headings: $text-vibrant,
+  // $text-blockquote: $text-muted,
+  // $link: $link,
+  // $link-hover: $link-vibrant,
+  // $link-visited: $text-vibrant,
+  // $table-thead: $text-vibrant,
+  // $scrollbar: $scrollbar,
+  // $margin: $gap-lg
+);

@@ -1,3 +1,7 @@
 @charset 'UTF-8';
 
+@use 'core/reset';
+@use 'core/fonts';
 @use 'motion';
+@use 'variables';
+@use '../../../node_modules/@microflash/remarkability/scss/remarkability.global.scss';

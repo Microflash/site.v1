@@ -1,0 +1,96 @@
+@use 'sass:color';
+@use 'sass:map';
+
+// Colormix functions
+// 
+// use `tint` instead of default `lighten`
+// use `shade` instead of default `darken` 
+// use `fade` instead of default `transparentize`
+
+@function tint($color, $percentage) {
+  @return color.mix($white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return color.mix($black, $color, $percentage);
+}
+
+@function fade($color, $transparency: 1) {
+  @return color.adjust($color, $alpha: -($transparency));
+}
+
+@function vibrant($color, $vibrance) {
+  @return color.adjust($color, $saturation: $vibrance);
+}
+
+// Color palettes
+// 
+// Ax00 variants are WCAG-accesible complements of x00 colors
+// all the colors are in CIECAM02 color space
+
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+
+$primary: (
+  100: hsl(152, 25%, 80%),
+  200: hsl(153, 26%, 75%),
+  300: hsl(153, 29%, 64%),
+  400: hsl(155, 33%, 53%),
+  500: hsl(160, 62%, 38%),
+  600: hsl(158, 49%, 36%),
+  700: hsl(156, 41%, 33%),
+  800: hsl(155, 35%, 29%),
+  900: hsl(154, 29%, 23%),
+) !default;
+
+$secondary: (
+  100: hsl(223, 8%, 83%),
+  200: hsl(227, 9%, 79%),
+  300: hsl(231, 9%, 72%),
+  400: hsl(227, 10%, 64%),
+  500: hsl(229, 10%, 57%),
+  600: hsl(228, 10%, 50%),
+  700: hsl(228, 13%, 44%),
+  800: hsl(229, 17%, 39%),
+  900: hsl(228, 16%, 30%)
+) !default;
+
+$tertiary: (
+  100: hsl(32, 46%, 81%),
+  200: hsl(32, 49%, 75%),
+  300: hsl(32, 54%, 66%),
+  400: hsl(32, 56%, 56%),
+  500: hsl(32, 43%, 49%),
+  600: hsl(32, 41%, 43%),
+  700: hsl(32, 37%, 38%),
+  800: hsl(31, 35%, 33%),
+  900: hsl(31, 32%, 25%)
+) !default;
+
+// Conveniences for palette access
+
+@function primary($variation) {
+  @return map.get($primary, $variation);
+}
+
+@function secondary($variation) {
+  @return map.get($secondary, $variation);
+}
+
+@function tertiary($variation) {
+  @return map.get($tertiary, $variation);
+}
+
+// CSS properties for light theme
+
+[data-theme='light'] {
+  --text: #{shade(tertiary(900), 20%)};
+  --bg: #{$white};
+}
+
+// CSS properties for dark theme
+
+[data-theme='dark'] {
+  --text: #{shade($white, 20%)};
+  --bg: #{shade(secondary(900), 60%)};
+}

@@ -101,11 +101,11 @@ $tertiary: (
 // CSS properties for dark theme
 
 [data-theme='dark'] {
-  --text: #{shade($white, 20%)};
+  --text: #{shade($white, 25%)};
   --text-muted: #{tertiary(600)};
   --text-vibrant: #{shade(tertiary(100), 33%)};
-  --link: #{primary(600)};
-  --link-vibrant: #{primary(500)};
+  --link: #{primary(500)};
+  --link-vibrant: #{primary(400)};
   --border: #{fade($white, 0.95)};
   --border-vibrant: #{fade($white, 0.75)};
   --scrollbar: #{fade(secondary(900), 0.3)};

@@ -47,11 +47,11 @@ export default {
       @include layout.py(properties.$gap-compressed);
 
       &:not(:first-child) {
-        margin-right: variables.$gap-sm;
+        margin-left: variables.$gap-sm;
       }
 
-      &:not(:last-child) {
-        margin-left: variables.$gap-sm;
+      &:not(:nth-last-child(2)) {
+        margin-right: variables.$gap-sm;
       }
     }
 
@@ -88,6 +88,10 @@ export default {
 
   .break {
     order: 3;
+  }
+
+  .brand + .header-link {
+    margin-left: 0 !important;
   }
 
   .theme-switcher,

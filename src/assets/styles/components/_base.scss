@@ -1,6 +1,7 @@
 @use '../variables';
 @use '../properties';
 @use '../mixins/layout';
+@use '../mixins/queries';
 
 // Container
 
@@ -12,6 +13,13 @@
   max-width: properties.$max-width;
   @include layout.px(properties.$space-rg);
 }
+
+// .wrapper {
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: flex-start;
+//   justify-content: flex-start;
+// }
 
 // Icons
 
@@ -49,11 +57,61 @@
 
 // Links
 
-.header {
-  a {
+a {
+  &[rel*='nofollow']::after {
+    content: variables.$symbol-external-link;
+  }
+
+  .header &,
+  .sidekick &,
+  .card & {
     &:focus,
     &:hover {
       text-decoration: none;
     }
+  }
+
+  .sidekick & {
+    display: inline-flex;
+    align-items: center;
+
+    svg {
+      margin-right: variables.$char-gap-sm;
+    }
+  }
+}
+
+// Typography
+
+.title {
+  font-size: variables.$font-xl;
+  color: variables.$text;
+}
+
+.subtitle {
+  font-size: variables.$font-md;
+  color: variables.$text-muted;
+}
+
+.is-primary {
+  color: variables.$link;
+  border-color: variables.$link;
+}
+
+.is-warning {
+  $red: hsl(350, 90%, 45%);
+  color: $red;
+  border-color: $red;
+}
+
+// Layout
+
+.gap-end {
+  margin-right: variables.$char-gap-sm;
+}
+
+.hidden-on-small {
+  @include queries.sm {
+    @include layout.hide;
   }
 }

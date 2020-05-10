@@ -1,0 +1,19 @@
+@use '../properties';
+
+// Content
+
+.content {
+  margin-top: properties.$space-rg;
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    
+    .article {
+      flex: 1;
+      max-width: properties.$article-width;
+    }
+  }
+}

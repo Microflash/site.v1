@@ -10,7 +10,8 @@
     "build": "gridsome build",
     "start": "gridsome develop",
     "status": "gridsome info",
-    "deploy": "gh-pages -b master -d public --message \"[skip ci] Updates\""
+    "deploy": "gh-pages -b master -d public --message \"[skip ci] Updates\"",
+    "post": "node tools/newPost.js"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",

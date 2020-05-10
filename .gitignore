@@ -1,8 +1,0 @@
-*.log
-.cache
-.vscode
-archive
-node_modules
-public
-**/.temp
-**/search.json

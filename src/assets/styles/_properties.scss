@@ -38,7 +38,7 @@ $space-lg: calc(var(--space-lg)) !default;
     --align-centered: center;
     --gap-compressed: #{$space-sm};
     --search-padding: #{variables.$gap};
-    --search-width: calc(50% + var(--search-padding));
+    --search-width: calc(50% + 2 * var(--search-padding));
     --search-alignment: 0;
     --hero-padding: #{$space-lg};
     --metadata-width: 80%;

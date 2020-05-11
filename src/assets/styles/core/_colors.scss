@@ -84,7 +84,7 @@ $tertiary: (
 // CSS properties for light theme
 
 [data-theme='light'] {
-  --text: #{shade(tertiary(900), 20%)};
+  --text: #{shade(secondary(900), 25%)};
   --text-muted: #{tertiary(700)};
   --text-vibrant: #{tertiary(700)};
   --link: #{primary(700)};

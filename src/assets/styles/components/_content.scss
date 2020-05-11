@@ -9,10 +9,13 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+
+    > * {
+      flex-basis: 100%;
+    }
     
+    .toc,
     .article {
-      flex: 1;
       max-width: properties.$article-width;
     }
   }

@@ -20,8 +20,6 @@
     }
 
     .sidekick-actions {
-      justify-content: properties.$align-centered;
-
       > * {
         @include layout.my(variables.$gap-xs);
 

@@ -15,7 +15,14 @@ postcssPlugins.push(autoprefixer({
 }))
 
 const remarkPlugins = [
-  ['gridsome-plugin-remark-prismjs-all', { noInlineHighlight: true }]
+  [
+    'gridsome-plugin-remark-prismjs-all', { 
+      noInlineHighlight: true,
+      aliases: {
+        sh: 'bash'
+      }
+    }
+  ]
 ]
 
 module.exports = {
@@ -41,6 +48,16 @@ module.exports = {
         baseDir: './content/profiles',
         template: './src/templates/Profile.vue',
         route: '/profile/:id'
+      }
+    },
+    {
+      use: '@gridsome/vue-remark',
+      options: {
+        typeName: 'Collection',
+        baseDir: './content/collection',
+        pathPrefix: '/collection',
+        template: './src/templates/Collection.vue',
+        plugins: remarkPlugins
       }
     },
     {

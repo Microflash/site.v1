@@ -145,12 +145,12 @@ export default {
   overflow: hidden;
   border-bottom-left-radius: properties.$radius-responsive;
   border-bottom-right-radius: properties.$radius-responsive;
+  box-shadow: 0 20px 40px variables.$bg-glossy;
 
   .results-box {
     overflow: auto;
     z-index: 5;
     background-color: variables.$bg-muted;
-    box-shadow: 0 30px 50px variables.$bg-glossy;
 
     > * {
       display: block;

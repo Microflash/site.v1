@@ -12,14 +12,11 @@
   width: auto;
   max-width: properties.$max-width;
   @include layout.px(properties.$space-rg);
-}
 
-// .wrapper {
-//   display: flex;
-//   flex-wrap: wrap;
-//   align-items: flex-start;
-//   justify-content: flex-start;
-// }
+  &.is-column {
+    flex-direction: column;
+  }
+}
 
 // Icons
 
@@ -64,7 +61,8 @@ a {
 
   .header &,
   .sidekick &,
-  .card & {
+  .card &,
+  .toc & {
     &:focus,
     &:hover {
       text-decoration: none;

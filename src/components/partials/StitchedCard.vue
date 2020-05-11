@@ -51,6 +51,10 @@ export default {
     @include layout.my(variables.$char-gap);
     font-weight: variables.$weight-md;
 
+    &.large {
+      font-size: variables.$font-md;
+    }
+
     .label {
       @include layout.size(variables.$icon-rg);
       margin-right: variables.$char-gap;

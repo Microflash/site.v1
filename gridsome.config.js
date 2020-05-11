@@ -1,7 +1,8 @@
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 const purgecss = require('@fullhuman/postcss-purgecss')
-const Critters = require('critters-webpack-plugin')
+// const Critters = require('critters-webpack-plugin')
+const marked = require('marked')
 
 const purgecssConfig = require('./purgecss.config')
 const appConfig = require('./app.config')
@@ -40,7 +41,22 @@ module.exports = {
       }
     }
   },
+  templates: {
+    Blog: '/blog/:year/:month/:day/:title'
+  },
   plugins: [
+    {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/blog/**/*.md',
+        typeName: 'Blog',
+        refs: {
+          authors: {
+            typeName: 'Profile'
+          }
+        }
+      }
+    },
     {
       use: '@gridsome/vue-remark',
       options: {
@@ -58,6 +74,47 @@ module.exports = {
         pathPrefix: '/collection',
         template: './src/templates/Collection.vue',
         plugins: remarkPlugins
+      }
+    },
+    {
+      use: '@microflash/gridsome-plugin-feed',
+      options: {
+        contentTypes: ['Blog'],
+        feedOptions: {
+          title: appConfig.name,
+          description: appConfig.description,
+          id: appConfig.url,
+          link: appConfig.url,
+          image: appConfig.favicon,
+          copyright: appConfig.copyright,
+        },
+        rss: {
+          enabled: true,
+          output: '/feed.xml'
+        },
+        atom: {
+          enabled: false,
+          output: '/feed.atom'
+        },
+        json: {
+          enabled: false,
+          output: '/feed.json'
+        },
+        maxItems: 25,
+        htmlFields: ['content'],
+        nodeToFeedItem: (node) => ({
+          title: node.title,
+          date: node.date,
+          description: node.excerpt,
+          author: [
+            {
+              name: `@${appConfig.name}`,
+              email: appConfig.maintainer,
+              link: appConfig.url
+            }
+          ],
+          content: marked(node.content)
+        })
       }
     },
     {

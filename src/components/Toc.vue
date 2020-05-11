@@ -1,5 +1,5 @@
 <template>
-  <section class="toc">
+  <section class="toc" id="table-of-contents">
     <a role="button" @click.prevent="toggleOpen()" aria-label="Toggle Table of contents" class="toc-header">
       <strong>Table of contents</strong>
       <div class="toc-minimizer">

@@ -4,7 +4,7 @@
     <div v-else class="card-metadata">
       <slot></slot>
     </div>
-    <div class="card-title">
+    <div class="card-title" :class="{ 'large': large }">
       <Sprite v-if="icon" class="label" :symbol="icon" />
       {{ this.src == '#' || this.src.startsWith('/') ? title : title + '&nearr;' }}
     </div>
@@ -22,6 +22,7 @@ export default {
     title: String,
     description: String,
     icon: String,
+    large: Boolean,
     src: {
       type: String,
       default: '#'

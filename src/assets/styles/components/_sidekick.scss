@@ -28,5 +28,26 @@
         }
       }
     }
+
+    .sidekick-recommendations {
+      flex-basis: 100%;
+      flex-direction: column;
+      align-items: flex-start;
+      font-size: variables.$font-rg;
+      
+      > * {
+        display: block;
+        padding: properties.$space-sm properties.$space-rg;
+        background-color: variables.$bg-vibrant;
+        border: 1px solid variables.$border;
+        border-radius: 20rem;
+        margin-bottom: properties.$space-sm;
+
+        &:focus,
+        &:hover {
+          background-color: variables.$bg-glossy;
+        }
+      }
+    }
   }
 }

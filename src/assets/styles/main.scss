@@ -8,6 +8,7 @@
 @use '../../../node_modules/@microflash/remarkability/scss/remarkability.global.scss';
 @use 'properties';
 @use 'core/syntax';
+@use 'mixins/grid';
 @use 'components/base';
 @use 'components/hero';
 @use 'components/sidekick';

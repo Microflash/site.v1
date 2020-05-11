@@ -113,3 +113,37 @@ a {
     @include layout.hide;
   }
 }
+
+// Full-width elements on phone
+
+$space-rg-neg: calc(-1rem - 2vw);
+
+blockquote {
+  @include queries.sm {
+    @include layout.mx($space-rg-neg);
+    @include layout.px(properties.$space-rg);
+  }
+}
+
+.gridsome-highlight {
+  @include queries.sm {
+    @include layout.mx($space-rg-neg);
+
+    pre {
+      border-radius: 0;
+    }
+
+    code {
+      @include layout.px(properties.$space-rg);
+    }
+
+    .gridsome-highlight-code-line {
+      margin-left: $space-rg-neg;
+      padding-left: properties.$space-rg;
+    }
+  }
+
+  @include queries.md {
+    width: 120%;
+  }
+}

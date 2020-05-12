@@ -31,19 +31,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-@use 'styles/_variables';
-
-.pagination {
-  justify-content: center;
-
-  .is-prev {
-    margin-right: variables.$gap;
-  }
-
-  .is-next {
-    margin-left: variables.$gap;
-  }
-}
-</style>

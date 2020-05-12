@@ -39,6 +39,10 @@
   }
 }
 
+.grid-sm {
+  @include grid($width: variables.$grid-sm, $gap: properties.$space-sm);
+}
+
 .grid-md {
   @include grid($width: variables.$grid-md, $gap: properties.$space-sm, $fill: false);
 }

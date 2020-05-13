@@ -9,13 +9,11 @@
     </section>
     <div class="content">
       <main class="container">
-        <div class="grid-lg">
-          <Card v-for="post in $page.posts.edges" :key="post.id" :title="post.node.title" :description="post.node.excerpt | clip" :src="post.node.path" large>
-            <span v-html="post.node.date"/>
-            <span>{{ post.node.timeToRead }} min read</span>
-            <Sprite :symbol="label" class="label" v-for="label in post.node.labels" :key="label" />
-          </Card>
-        </div>
+        <Card v-for="post in $page.posts.edges" :key="post.id" :title="post.node.title" :description="post.node.excerpt | clip" :src="post.node.path" large>
+          <span v-html="post.node.date"/>
+          <span>{{ post.node.timeToRead }} min read</span>
+          <Sprite :symbol="label" class="label" v-for="label in post.node.labels" :key="label" />
+        </Card>
       </main>
     </div>
     <Pagination :input="$page.posts.pageInfo" />

@@ -1,7 +1,6 @@
 const path = require('path')
 const autoprefixer = require('autoprefixer')
 const purgecss = require('@fullhuman/postcss-purgecss')
-// const Critters = require('critters-webpack-plugin')
 const marked = require('marked')
 
 const purgecssConfig = require('./purgecss.config')
@@ -20,7 +19,8 @@ const remarkPlugins = [
     'gridsome-plugin-remark-prismjs-all', { 
       noInlineHighlight: true,
       aliases: {
-        sh: 'bash'
+        sh: 'shell',
+        conf: 'properties'
       }
     }
   ]
@@ -154,13 +154,9 @@ module.exports = {
   },
   chainWebpack: config => {
     config.resolve.alias.set('static', path.resolve(__dirname, 'static'))
-    config.resolve.alias.set('styles', path.resolve(__dirname, 'src/assets/styles'))
     config.module.rules.delete('svg')
     config.module.rule('svg')
       .test(/\.svg$/).use('vue').loader('vue-loader').end()
       .use('svg-to-vue-component').loader('svg-to-vue-component/loader')
-    // config.plugin('critical').use(new Critters({
-    //   preload: 'swap'
-    // }))
   }
 }

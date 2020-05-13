@@ -11,6 +11,10 @@
   padding: properties.$space-sm;
   border-radius: variables.$radius;
 
+  &.large-gap {
+    padding: properties.$space-rg;
+  }
+
   &:focus,
   &:hover {
     background-color: variables.$bg-glossy;
@@ -27,7 +31,7 @@
     @include layout.my(variables.$char-gap);
     font-weight: variables.$weight-md;
 
-    &.large {
+    &.large-title {
       font-size: variables.$font-md;
     }
 

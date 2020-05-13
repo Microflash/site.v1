@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <div class="container">
-      <g-link class="brand" to="/">
+      <g-link class="brand" aria-label="Microflash logo" to="/">
         <Logo />
       </g-link>
       <g-link class="header-link" to="/collection/">Collection</g-link>

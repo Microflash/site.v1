@@ -20,15 +20,6 @@ mkdir -p $svg_cache_dir
 cp -r "$svg_source_dir/labels" "$cache_dir/labels"
 cp -r "$svg_source_dir/icons" "$cache_dir/icons"
 
-echo 'Generate symbols'
-
-cd "$cache_dir/labels/"
-awk -i inplace '{a=FILENAME;sub(/\.svg$/,"",a);gsub(/<svg [^<]*xmlns/,"<svg id=\""a"\" xmlns")}1' *
-cd - > /dev/null
-cd "$cache_dir/icons/"
-awk -i inplace '{a=FILENAME;sub(/\.svg$/,"",a);gsub(/<svg [^<]*xmlns/,"<svg id=\"icon-"a"\" xmlns")}1' *
-cd - > /dev/null
-
 echo 'Generate sprite'
 
 cp $svg_source_files $svg_cache_dir

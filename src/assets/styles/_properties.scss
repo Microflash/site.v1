@@ -27,6 +27,7 @@ $space-lg: calc(var(--space-lg)) !default;
   --metadata-width: 100%;
   --metadata-gap: #{variables.$gap};
   --article-width: 100%;
+  --sidekick-width: 100%;
 }
 
 @include queries.md {
@@ -44,6 +45,7 @@ $space-lg: calc(var(--space-lg)) !default;
     --metadata-width: 80%;
     --metadata-gap: 0;
     --article-width: 70%;
+    --sidekick-width: max-content;
   }
 }
 
@@ -60,3 +62,4 @@ $hero-padding: var(--hero-padding) !default;
 $metadata-width: var(--metadata-width) !default;
 $metadata-gap: var(--metadata-gap) !default;
 $article-width: var(--article-width) !default;
+$sidekick-width: var(--sidekick-width) !default;

@@ -6,8 +6,12 @@
 .toc {
   background-color: variables.$bg-vibrant;
   border-radius: variables.$radius;
-  padding: 1em 1.2em;
   margin-bottom: properties.$space-rg;
+  width: 100%;
+
+  a {
+    padding: 1em 1.2em;
+  }
 }
 
 .toc-header {
@@ -25,8 +29,8 @@
 .toc-body {
   list-style-type: none;
   margin-left: 0;
-  margin-top: variables.$gap;
   font-size: variables.$font-sm;
+  padding: 0 variables.$gap variables.$gap-lg;
 
   li {
     $toc-margin: variables.$gap;

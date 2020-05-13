@@ -6,24 +6,17 @@
 // Grid mixin
 // generates a grid with cells of specified width
 
-@mixin grid($width, $gap: variables.$gap, $fill: true) {
+@mixin grid($width, $gap: properties.$space-sm, $strategy: auto-fill) {
   display: flex;
   flex-wrap: wrap;
-  width: inherit;
 
   display: grid;
   grid-gap: $gap;
-
-  @if $fill {
-    grid-template-columns: repeat(auto-fill, minmax($width, 1fr));
-  } @else {
-    grid-template-columns: repeat(auto-fit, minmax($width, 1fr));
-  }
-
+  grid-template-columns: repeat($strategy, minmax($width, 1fr));
   grid-auto-rows: minmax(max-content, auto);
 
   @include queries.sm {
-    grid-template-columns: 100%;
+    grid-template-columns: none;
   }
 
   > * {
@@ -40,13 +33,9 @@
 }
 
 .grid-sm {
-  @include grid($width: variables.$grid-sm, $gap: properties.$space-sm);
+  @include grid(variables.$grid-sm);
 }
 
 .grid-md {
-  @include grid($width: variables.$grid-md, $gap: properties.$space-sm, $fill: false);
-}
-
-.grid-lg {
-  @include grid($width: variables.$grid-lg, $gap: properties.$space-sm);
+  @include grid(variables.$grid-md, $strategy: auto-fit);
 }

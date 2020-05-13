@@ -1,13 +1,13 @@
 <template>
   <div class="search">
-    <a role="button" @click="expand">
+    <a role="button" aria-label="Launch search" @click="expand">
       <Sprite symbol="icon-search" class="icon" />
     </a>
     <transition name="dissolve">
       <div v-if="expanded" class="search-container">
         <div class="search-box">
           <input type="text" class="search-input" placeholder="Search" v-model="query" @input="softReset" @keyup="performSearch" @keyup.esc="searchResultsVisible = false" @keydown.up.prevent="highlightPrev" @keydown.down.prevent="highlightNext" @keyup.enter="performSearch" @blur="searchResultsVisible = false" @focus="searchResultsVisible = true" ref="search" aria-label="Search">
-          <a role="button" @click="reset" class="search-reset">
+          <a role="button" aria-label="Reset search" @click="reset" class="search-reset">
             <Sprite symbol="icon-delete" class="icon" />
           </a>
         </div>
@@ -90,11 +90,11 @@ export default {
     expand(e) {
       this.expanded = !this.expanded
 
-      this.$nextTick(() => {
-        if (this.expanded) {
+      if (this.expanded) {
+        this.$nextTick(() => {
           this.$refs.search.focus()
-        }
-      })
+        })
+      }
     }
   }
 }

@@ -75,7 +75,7 @@ module.exports = function (api) {
       return {
         title: post.title,
         path: post.path,
-        excerpt: post.excerpt ? post.excerpt : summarize(post.content)
+        excerpt: post.excerpt ? post.excerpt : excerpt(post.content)
       }
     })
 

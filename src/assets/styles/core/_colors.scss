@@ -56,15 +56,15 @@ $secondary: (
 ) !default;
 
 $tertiary: (
-  100: hsl(32, 46%, 81%),
-  200: hsl(32, 49%, 75%),
-  300: hsl(32, 54%, 66%),
-  400: hsl(32, 56%, 56%),
-  500: hsl(32, 43%, 49%),
-  600: hsl(32, 41%, 43%),
-  700: hsl(32, 37%, 38%),
-  800: hsl(31, 35%, 33%),
-  900: hsl(31, 32%, 25%)
+  100: hsl(34, 86%, 77%),
+  200: hsl(34, 68%, 73%),
+  300: hsl(35, 46%, 65%),
+  400: hsl(34, 33%, 58%),
+  500: hsl(35, 23%, 51%),
+  600: hsl(34, 22%, 45%),
+  700: hsl(35, 20%, 39%),
+  800: hsl(34, 19%, 33%),
+  900: hsl(32, 18%, 26%)
 ) !default;
 
 // Conveniences for palette access
@@ -86,24 +86,24 @@ $tertiary: (
 [data-theme='light'] {
   --text: #{shade(secondary(900), 25%)};
   --text-muted: #{tertiary(700)};
-  --text-vibrant: #{tertiary(700)};
-  --link: #{primary(700)};
-  --link-vibrant: #{primary(800)};
+  --text-vibrant: #{secondary(800)};
+  --link: #{vibrant(primary(700), 0.5)};
+  --link-vibrant: #{vibrant(primary(800), 0.5)};
   --border: #{fade($black, 0.9)};
   --border-vibrant: #{fade($black, 0.7)};
-  --scrollbar: #{fade(tertiary(200), 0.3)};
+  --scrollbar: #{fade(tertiary(300), 0.3)};
   --bg: #{$white};
-  --bg-muted: #{tint(tertiary(100), 90%)};
-  --bg-vibrant: #{tint(tertiary(100), 70%)};
-  --bg-glossy: #{tint(tertiary(300), 55%)};
+  --bg-muted: #{tint(tertiary(200), 94%)};
+  --bg-vibrant: #{tint(tertiary(100), 77%)};
+  --bg-glossy: #{tint(tertiary(100), 33%)};
 }
 
 // CSS properties for dark theme
 
 [data-theme='dark'] {
   --text: #{shade($white, 25%)};
-  --text-muted: #{tertiary(600)};
-  --text-vibrant: #{shade(tertiary(100), 33%)};
+  --text-muted: #{shade(tertiary(500), 11%)};
+  --text-vibrant: #{tint(tertiary(800), 25%)};
   --link: #{primary(500)};
   --link-vibrant: #{primary(400)};
   --border: #{fade($white, 0.95)};

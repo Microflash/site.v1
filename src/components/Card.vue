@@ -1,10 +1,10 @@
 <template>
-  <StitchedCard :src="src">
+  <StitchedCard :src="src" :class="{ 'large-gap': large }">
     <div v-if="metadata" class="card-metadata">{{ metadata }}</div>
     <div v-else class="card-metadata">
       <slot></slot>
     </div>
-    <div class="card-title" :class="{ 'large': large }">
+    <div class="card-title" :class="{ 'large-title': large }">
       <Sprite v-if="icon" class="label" :symbol="icon" />
       {{ this.src == '#' || this.src.startsWith('/') ? title : title + '&nearr;' }}
     </div>

@@ -27,7 +27,7 @@
   stroke-linejoin: round;
   vertical-align: middle;
   fill: currentColor;
-  fill-opacity: 0.3;
+  fill-opacity: 0.25;
 }
 
 .icon {
@@ -40,16 +40,6 @@
   @extend .svg;
   stroke-width: 2px;
   @include layout.size(variables.$icon-sm);
-}
-
-// Spacing
-
-.is-sm {
-  @include layout.py(properties.$space-sm);
-}
-
-.is-md {
-  @include layout.py(properties.$space-md);
 }
 
 // Links
@@ -77,6 +67,10 @@ a {
       margin-right: variables.$char-gap-sm;
     }
   }
+}
+
+.active {
+  font-weight: variables.$weight-md;
 }
 
 // Typography
@@ -122,6 +116,19 @@ blockquote {
   @include queries.sm {
     @include layout.mx($space-rg-neg);
     @include layout.px(properties.$space-rg);
+  }
+}
+
+.content {
+  @include queries.sm {
+    .container {
+      flex-direction: column;
+
+      .large-gap {
+        @include layout.mx($space-rg-neg);
+        border-radius: 0;
+      }
+    }
   }
 }
 

@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import * as appConfig from '../../app.config'
+import * as appConfig from '@/app.config'
 
 export default {
   props: ['headers', 'depth'],

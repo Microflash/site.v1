@@ -1,5 +1,5 @@
 <template>
-  <a role="switch" @click.prevent="switchTheme()" :aria-label="'Switch to ' + nextTheme + ' theme'" class="theme-switcher">
+  <a role="switch" @click.prevent="switchTheme()" :aria-label="'Switch to ' + nextTheme + ' theme'" aria-checked="true" class="theme-switcher">
     <svg viewBox="0 0 24 24" class="icon">
       <transition name="slide-up" mode="out-in">
         <use :xlink:href="link('icon-dark')" :href="link('icon-dark')" key="dark" v-if="theme === 'dark'"></use>

@@ -1,7 +1,7 @@
-@use '../variables';
-@use '../properties';
-@use '../mixins/layout';
-@use '../mixins/queries';
+@use 'variables';
+@use 'properties';
+@use 'mixins/layout';
+@use 'mixins/queries';
 
 // Container
 
@@ -49,13 +49,17 @@ a {
     content: variables.$symbol-external-link;
   }
 
-  .header &,
-  .sidekick &,
-  .card &,
-  .toc & {
+  &:focus,
+  &:hover {
+    text-decoration: none;
+  }
+
+  .hero &,
+  .article &,
+  .footer & {
     &:focus,
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 
@@ -67,10 +71,10 @@ a {
       margin-right: variables.$char-gap-sm;
     }
   }
-}
 
-.active {
-  font-weight: variables.$weight-md;
+  &.active {
+    font-weight: variables.$weight-md;
+  }
 }
 
 // Typography

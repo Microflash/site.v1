@@ -1,6 +1,6 @@
 const pkg = require('./package.json')
 
-const capitalize = ([ first, ...rest ]) => [ first.toUpperCase(), ...rest ].join('')
+const capitalize = ([first, ...rest]) => [first.toUpperCase(), ...rest].join('')
 
 const pkgName = capitalize(pkg.name)
 const pkgAuthor = pkg.author
@@ -54,12 +54,6 @@ module.exports = {
       {
         rel: 'manifest',
         href: '/manifest.json'
-      },
-      {
-        rel: 'preload',
-        href: '/assets/images/icons.svg',
-        type: 'image/svg+xml',
-        as: 'image'
       }
     ]
   },

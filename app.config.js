@@ -55,6 +55,12 @@ module.exports = {
       {
         rel: 'manifest',
         href: '/manifest.json'
+      },
+      {
+        rel: 'preload',
+        href: '/assets/images/icons.svg',
+        type: 'image/svg+xml',
+        as: 'image'
       }
     ]
   },

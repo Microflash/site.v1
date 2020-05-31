@@ -86,6 +86,7 @@ $black: mono(900);
   --border: #{mix($bg-base, $text-base, 77%)};
   --bg-body: #{$bg-base};
   --bg-vibrant: #{$white};
+  --bg-feed: #{mix($white, mono(200), 55%)};
 }
 
 // CSS properties for dark theme
@@ -101,4 +102,5 @@ $black: mono(900);
   --border: #{mix($bg-base, $text-base, 88%)};
   --bg-body: #{$bg-base};
   --bg-vibrant: #{mix($black, $bg-base, 20%)};
+  --bg-feed: #{mix($black, $bg-base, 12%)};
 }

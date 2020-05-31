@@ -10,7 +10,8 @@
     "build": "gridsome build",
     "start": "gridsome develop",
     "status": "gridsome info",
-    "post": "node bin/newPost.js"
+    "new:post": "node bin/newPost.js",
+    "new:status": "node bin/newStatus.js"
   },
   "dependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",

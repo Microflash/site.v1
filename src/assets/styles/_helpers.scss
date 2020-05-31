@@ -100,7 +100,8 @@ blockquote {
   @include queries.sm {
     flex-direction: column;
 
-    .card {
+    .card,
+    .feed-item {
       @include layout.margin-inline($space-rg-neg);
       border-radius: 0;
     }

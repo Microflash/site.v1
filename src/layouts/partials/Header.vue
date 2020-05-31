@@ -3,6 +3,7 @@
     <g-link class="brand" aria-label="Microflash logo" to="/">
       <Logo />
     </g-link>
+    <g-link to="/feed/">Feed</g-link>
     <g-link to="/collection/">Collection</g-link>
     <g-link to="/profile/naiyer/">About</g-link>
     <ThemeSwitcher />

@@ -69,6 +69,7 @@ $code-selected: colors.fade(colors.primary(500), 0.91) !default;
 
 $bg-body: var(--bg-body) !default;
 $bg-vibrant: var(--bg-vibrant) !default;
+$bg-feed: var(--bg-feed) !default;
 
 @use '../../../node_modules/@microflash/remarkability/scss/variables' with (
   $multiline-wrap: true,

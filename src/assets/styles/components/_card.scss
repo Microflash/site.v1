@@ -39,7 +39,7 @@ $card-description-size: variables.$font-rg;
     color: $card-metadata-color;
     font-size: $card-metadata-font-size;
 
-    > span::after {
+    > *::after {
       content: variables.$symbol-separator;
       @include layout.margin-inline(variables.$separator-gap);
       opacity: variables.$separator-opacity;

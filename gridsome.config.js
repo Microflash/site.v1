@@ -58,6 +58,13 @@ module.exports = {
       }
     },
     {
+      use: '@gridsome/source-filesystem',
+      options: {
+        path: 'content/feed/**/*.md',
+        typeName: 'Feed'
+      }
+    },
+    {
       use: '@gridsome/vue-remark',
       options: {
         typeName: 'Profile',

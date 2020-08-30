@@ -96,8 +96,8 @@ $black: mono(900);
   --weight-rg: 400;
   --weight-bd: 700;
 
-  --stroke-width-sm: 2px;
-  --stroke-width-rg: 1.5px;
+  --stroke-sm: 1.75px;
+  --stroke-rg: 1.25px;
 }
 
 // CSS properties for dark theme
@@ -123,6 +123,6 @@ $black: mono(900);
   --weight-rg: 350;
   --weight-bd: 600;
 
-  --stroke-width-sm: 1.5px;
-  --stroke-width-rg: 1px;
+  --stroke-sm: 1.5px;
+  --stroke-rg: 1px;
 }

@@ -63,3 +63,19 @@ $container-max-width: properties.$container-width;
     display: $display-fallback;
   }
 }
+
+// Full-width
+
+$pgap: properties.$space-rg;
+$ngap: properties.$nspace-rg;
+
+@mixin fullwidth($my: false) {
+  @if $my {
+    margin: $pgap $ngap;
+  } @else {
+    margin-right: $ngap;
+    margin-left: $ngap;
+  }
+
+  padding: $pgap;
+}

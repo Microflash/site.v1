@@ -67,7 +67,7 @@ $container-max-width: properties.$container-width;
 // Full-width
 
 $pgap: properties.$space-rg;
-$ngap: properties.$nspace-rg;
+$ngap: properties.$negative-space-rg;
 
 @mixin fullwidth($my: false) {
   @if $my {
@@ -78,4 +78,32 @@ $ngap: properties.$nspace-rg;
   }
 
   padding: $pgap;
+}
+
+// Even-gap
+
+$even-gap: variables.$ch-rg;
+
+@mixin even-gap($gap: $even-gap) {
+  & > *:not(:last-child) {
+    margin-right: $gap;
+  }
+}
+
+// Tappable
+
+$tappable-radius: variables.$radius;
+$tappable-gapx: variables.$gap-sm;
+$tappable-gapy: variables.$gap-xs;
+$tappable-background: variables.$bg-passive;
+
+@mixin tappable($radius: $tappable-radius, $gapx: $tappable-gapx, $gapy: $tappable-gapy) {
+  border-radius: $tappable-radius;
+  padding: $tappable-gapy $tappable-gapx;
+
+  &:focus,
+  &:hover {
+    background-color: $tappable-background;
+    text-decoration: none;
+  }
 }

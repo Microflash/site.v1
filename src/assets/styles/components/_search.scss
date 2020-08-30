@@ -4,13 +4,13 @@
 
 // Search
 
-$search-background: variables.$bg-muted;
+$search-background: variables.$bg-passive;
 $search-border-radius: properties.$responsive-radius;
 $search-gap-inline: properties.$search-gap-inline;
 $search-top-margin: properties.$search-top-margin;
 $searchbox-inline-padding: properties.$searchbox-gap-inline;
 $searchbox-block-padding: variables.$gap-sm;
-$result-background: variables.$bg-vibrant;
+$result-background: variables.$bg-active;
 $result-border: variables.$border;
 $result-border-width: properties.$result-border-width;
 

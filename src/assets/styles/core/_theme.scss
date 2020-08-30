@@ -80,14 +80,13 @@ $black: mono(900);
   $text-base: mix($black, secondary(900), 25%);
 
   --text: #{$text-base};
-  --text-muted: #{saturate(mix($bg-base, secondary(800), 10%), 20%)};
+  --text-passive: #{saturate(mix($bg-base, secondary(800), 10%), 20%)};
   --link: #{mix($text-base, primary(500), 24%)};
-  --link-vibrant: #{mix($text-base, primary(500), 31%)};
+  --link-active: #{mix($text-base, primary(500), 31%)};
   --border: #{mix($bg-base, $text-base, 77%)};
   --bg-body: #{$bg-base};
-  --bg-vibrant: #{mix($white, mono(200), 85%)};
-  --bg-muted: #{mix($white, primary(300), 80%)};
-
+  --bg-active: #{mix($white, mono(200), 85%)};
+  --bg-passive: #{mix($white, primary(300), 80%)};
   --bg-caution: hsl(54, 36%, 86%);
   --bg-tip: hsl(160, 27%, 88%);
   --bg-warning: hsl(5, 70%, 90%);
@@ -107,14 +106,13 @@ $black: mono(900);
   $text-base: mix($black, $white, 25%);
 
   --text: #{$text-base};
-  --text-muted: #{mix($bg-base, secondary(500), 5%)};
+  --text-passive: #{mix($bg-base, secondary(500), 5%)};
   --link: #{mix($text-base, primary(500), 5%)};
-  --link-vibrant: #{primary(400)};
+  --link-active: #{primary(400)};
   --border: #{mix($bg-base, $text-base, 85%)};
   --bg-body: #{$bg-base};
-  --bg-vibrant: #{mix($black, $bg-base, 20%)};
-  --bg-muted: #{mix($black, primary(900), 33%)};
-
+  --bg-active: #{mix($black, $bg-base, 20%)};
+  --bg-passive: #{mix($black, primary(900), 33%)};
   --bg-caution: hsl(51, 23%, 24%);
   --bg-tip: hsl(160, 34%, 22%);
   --bg-warning: hsl(4, 56%, 28%);

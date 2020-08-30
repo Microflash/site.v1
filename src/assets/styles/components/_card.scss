@@ -4,14 +4,14 @@
 
 // Card
 
-$card-background: variables.$bg-vibrant;
-$card-active-background: variables.$bg-muted;
+$card-background: variables.$bg-active;
+$card-active-background: variables.$bg-passive;
 $gap: properties.$space-rg;
 $ngap: properties.$nspace-rg;
 $card-radius: properties.$responsive-radius;
 $card-title-size: variables.$font-lg;
 $card-description-size: variables.$font-rg;
-$metadata-color: variables.$text-muted;
+$metadata-color: variables.$text-passive;
 $metadata-font-size: variables.$font-sm;
 $topics-font-size: variables.$font-xs;
 

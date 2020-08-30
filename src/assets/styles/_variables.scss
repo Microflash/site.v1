@@ -55,19 +55,18 @@ $separator-opacity: 0.5 !default;
 // Colors
 
 $text: var(--text) !default;
-$text-muted: var(--text-muted) !default;
+$text-passive: var(--text-passive) !default;
 
 $link: var(--link) !default;
-$link-vibrant: var(--link-vibrant) !default;
+$link-active: var(--link-active) !default;
 
 $border: var(--border) !default;
 $selected: theme.fade(theme.primary(500), 0.75) !default;
 $code-selected: theme.fade(theme.primary(500), 0.91) !default;
 
 $bg-body: var(--bg-body) !default;
-$bg-vibrant: var(--bg-vibrant) !default;
-$bg-muted: var(--bg-muted) !default;
-
+$bg-active: var(--bg-active) !default;
+$bg-passive: var(--bg-passive) !default;
 $bg-caution: var(--bg-caution) !default;
 $bg-tip: var(--bg-tip) !default;
 $bg-warning: var(--bg-warning) !default;
@@ -89,25 +88,25 @@ $bg-important: var(--bg-important) !default;
   $weight-normal: $weight-rg,
   $weight-bold: $weight-bd,
   $background-body: $bg-body,
-  $background-code: $bg-muted,
-  $background-ins: $bg-muted,
-  $background-mark: $bg-muted,
+  $background-code: $bg-passive,
+  $background-ins: $bg-passive,
+  $background-mark: $bg-passive,
   $background-table: inherit,
   $background-table-even: inherit,
-  $background-table-hover: $bg-vibrant,
+  $background-table-hover: $bg-active,
   $background-selected: $selected,
-  $background-scrollbar: $bg-vibrant,
+  $background-scrollbar: $bg-active,
   $border-color: $border,
   $radius: $radius,
   $text: $text,
   $text-code: inherit,
   $text-bold: inherit,
-  $text-muted: $text-muted,
+  $text-muted: $text-passive,
   $text-headings: $text,
-  $text-blockquote: $text-muted,
+  $text-blockquote: $text-passive,
   $link: $link,
-  $link-active: $link-vibrant,
-  $link-visited: $link-vibrant,
+  $link-active: $link-active,
+  $link-visited: $link-active,
   $table-thead: inherit,
   $scrollbar: $border,
   $margin: $gap-lg

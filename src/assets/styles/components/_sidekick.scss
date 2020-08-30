@@ -6,16 +6,16 @@
 
 $gap-start: properties.$hero-gap-block;
 $indicator-padding: variables.$ch-rg;
-$indicator-color: variables.$text-muted;
+$indicator-color: variables.$text-passive;
 $indicator-font-size: variables.$font-xs;
 $indicator-gap-end: properties.$space-rg;
 $actions-gap-inline: variables.$gap-xs;
 $actions-radius: variables.$radius;
 $actions-inline-padding: variables.$gap-sm;
 $actions-block-padding: variables.$gap-xs;
-$actions-active-background: variables.$bg-muted;
-$sidekick-background: variables.$bg-vibrant;
-$sidekick-active-background: variables.$bg-muted;
+$actions-active-background: variables.$bg-passive;
+$sidekick-background: variables.$bg-active;
+$sidekick-active-background: variables.$bg-passive;
 
 .sidekick {
   display: flex;

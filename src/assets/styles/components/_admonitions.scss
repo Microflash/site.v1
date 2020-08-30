@@ -43,8 +43,8 @@ $font-size: 0.9em;
 
 // Presets
 
-$default-background: variables.$bg-vibrant;
-$default-color: variables.$text-muted;
+$default-background: variables.$bg-active;
+$default-color: variables.$text-passive;
 $caution-background: variables.$bg-caution;
 $caution-color: variables.$text;
 $tip-background: variables.$bg-tip;
@@ -53,8 +53,8 @@ $warning-background: variables.$bg-warning;
 $warning-color: variables.$text;
 $important-background: variables.$bg-important;
 $important-color: variables.$text;
-$note-background: variables.$bg-vibrant;
-$note-color: variables.$text-muted;
+$note-background: variables.$bg-active;
+$note-color: variables.$text-passive;
 
 @mixin admonition($background: $default-background, $foreground: $default-color) {
   background-color: $background;

@@ -26,7 +26,7 @@ $nspace-rg: calc(var(--base-gap) * -1) !default;
 
 @include queries.md {
   :root {
-    --container-width: calc(#{variables.$breakpoint-sm} + #{variables.$container-offset});
+    --container-width: #{variables.$max-width};
     --responsive-wrap: nowrap;
     --responsive-radius: #{variables.$radius};
     --searchbox-gap-inline: #{$space-sm};

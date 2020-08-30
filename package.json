@@ -1,6 +1,6 @@
 {
   "name": "microflash",
-  "version": "0.11.0",
+  "version": "0.12.0",
   "private": true,
   "description": "Reflections on design and development by Naiyer Asif",
   "repository": "https://github.com/Microflash/site.git",
@@ -10,10 +10,9 @@
     "build": "gridsome build",
     "start": "gridsome develop",
     "status": "gridsome info",
-    "new": "node bin/content.js",
-    "build:icons": "run-s icons:*",
-    "icons:archive": "shx cp static/assets/images/icons.svg .archive/backups/icons.svg",
-    "icons:build": "spritely --input .archive/svg/icons --output static/assets/images/icons.svg --prefix \"icon-\""
+    "new:post": "node bin/content.js --content post",
+    "new:note": "node bin/content.js --content note",
+    "new:icons": "shx cp static/assets/images/icons.svg .archive/backups/icons.svg && spritely --input .archive/svg/icons --output static/assets/images/icons.svg --prefix \"icon-\""
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.1",
@@ -37,7 +36,6 @@
     "marked": "^1.1.1",
     "moment": "^2.27.0",
     "netlify-cli": "^2.59.1",
-    "npm-run-all": "^4.1.5",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.3",
     "shx": "^0.3.2",

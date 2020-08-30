@@ -11,7 +11,7 @@
         <dl>
           <div class="definition" v-for="project in $page.projects.edges" :key="project.id">
             <dt>
-              <g-link v-if="isInternalLink(project.node.link)" :to="project.node.link">{{ project.node.title }}</g-link>
+              <g-link v-if="!!project.node.link" :to="project.node.link">{{ project.node.title }}</g-link>
               <a v-else target="_blank" rel="nofollow noopener noreferrer" :href="project.node.link">{{ project.node.title }}</a>
             </dt>
             <dd>{{ project.node.description }}</dd>
@@ -43,11 +43,6 @@ export default {
   metaInfo() {
     return {
       title: 'Projects'
-    }
-  },
-  methods: {
-    isInternalLink(link) {
-      return link.startsWith('/')
     }
   }
 }

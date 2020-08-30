@@ -3,7 +3,7 @@ const fs = require('fs')
 const moment = require('moment')
 
 const appConfig = require('./app.config')
-const localProjects = require('./content/projects')
+const projects = require('./content/projects')
 
 const outdationDate = appConfig.prefs.outdationPeriod ? moment().clone().subtract(appConfig.prefs.outdationPeriod, 'days').startOf('day') : null
 
@@ -27,29 +27,20 @@ module.exports = api => {
     return { ...options }
   })
 
-  api.loadSource(async ({ getCollection, addCollection, addSchemaResolvers }) => {
-
+  api.loadSource(async ({ getCollection, addCollection }) => {
     const { collection } = getCollection('Project')
 
-    const generatedProjects = collection.data.map(generated => {
-      return {
-        id: generated.id,
-        title: generated.title,
-        description: generated.description,
-        link: generated.path
-      }
-    })
-
-    const projects = addCollection({
+    const allProjects = addCollection({
       typeName: 'CompleteProject'
     })
 
-    generatedProjects.forEach(generated => {
-      projects.addNode(generated)
-    })
-
-    localProjects.forEach(local => {
-      projects.addNode(local)
+    projects.concat(collection.data).forEach(project => {
+      allProjects.addNode({
+        id: project.id,
+        title: project.title,
+        description: project.description,
+        link: project.path
+      })
     })
   })
 

@@ -22,6 +22,12 @@ module.exports = {
     maxTocDepth: 3,
     outdationPeriod: 365 // in days
   },
+  paths: {
+    search: {
+      dir: './static',
+      name: 'search.json'
+    }
+  },
   head: {
     meta: [
       { name: 'author', content: pkgAuthor },
@@ -36,25 +42,19 @@ module.exports = {
       { rel: 'preload', href: '/assets/images/icons.svg', type: 'image/svg+xml', as: 'image' }
     ]
   },
-  searchConfig: {
-    file: {
-      dir: 'static',
-      name: 'search.json'
-    },
-    options: {
-      shouldSort: true,
-      includeMatches: true,
-      tokenize: true,
-      matchAllTokens: true,
-      threshold: 0.3,
-      location: 0,
-      distance: 600,
-      maxPatternLength: 32,
-      minMatchCharLength: 3,
-      keys: [
-        'title',
-        'topics'
-      ]
-    }
+  search: {
+    shouldSort: true,
+    includeMatches: true,
+    tokenize: true,
+    matchAllTokens: true,
+    threshold: 0.3,
+    location: 0,
+    distance: 600,
+    maxPatternLength: 32,
+    minMatchCharLength: 3,
+    keys: [
+      'title',
+      'topics'
+    ]
   }
 }

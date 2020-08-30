@@ -2,10 +2,10 @@ const path = require('path')
 const fs = require('fs')
 const moment = require('moment')
 
-const appConfig = require('./app.config')
+const { prefs, paths } = require('./app.config')
 const projects = require('./content/projects')
 
-const outdationDate = appConfig.prefs.outdationPeriod ? moment().clone().subtract(appConfig.prefs.outdationPeriod, 'days').startOf('day') : null
+const outdationDate = prefs.outdationPeriod ? moment().clone().subtract(prefs.outdationPeriod, 'days').startOf('day') : null
 
 module.exports = api => {
 
@@ -86,11 +86,7 @@ module.exports = api => {
       }
     })
 
-    const output = {
-      dir: `./${appConfig.searchConfig.file.dir}`,
-      name: appConfig.searchConfig.file.name
-    }
-
+    const output = paths.search
     const outputPath = path.resolve(process.cwd(), output.dir)
     const outputPathExists = fs.existsSync(outputPath)
     const fileName = output.name.endsWith('.json') ? output.name : `${output.name}.json`

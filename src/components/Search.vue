@@ -33,14 +33,14 @@ import axios from 'axios'
 import Sprite from './Sprite'
 
 import * as appConfig from '@/app.config'
-const searchConfig = appConfig.searchConfig
+const { search, paths } = appConfig
 
 export default {
   components: {
     Sprite
   },
   created() {
-    axios(`/${searchConfig.file.name}`).then(response => {
+    axios(`/${paths.search.name}`).then(response => {
       this.posts = response.data
     }).catch(error => {
       console.log(error)
@@ -53,7 +53,7 @@ export default {
       posts: [],
       highlightedIndex: 0,
       searchResultsVisible: false,
-      options: searchConfig.options,
+      options: search,
       expanded: false
     }
   },

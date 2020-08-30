@@ -16,6 +16,16 @@
   }
 }
 
+@mixin animate-property($name, $duration: 500ms, $timing-fn: ease-in-out) {
+  transition-property: $name;
+  transition-duration: $duration;
+  transition-timing-function: $timing-fn;
+
+  @media (print), (prefers-reduced-motion: reduce) {
+    transition-duration: 1ms;
+  }
+}
+
 // Dissolve transition
 
 .dissolve-enter-to,
@@ -55,4 +65,11 @@
 .rotate-in-right-enter,
 .rotate-in-right-leave-to {
   opacity: 0;
+}
+
+// Theme switch transition
+
+* {
+  @include animate-property(background-color, 300ms, ease-out);
+  @include animate-property(color, 300ms, ease-out);
 }

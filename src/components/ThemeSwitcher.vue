@@ -12,6 +12,7 @@
 <script>
 import * as appConfig from '@/app.config'
 
+const { paths } = appConfig
 const themes = ['light', 'dark']
 
 export default {
@@ -35,7 +36,7 @@ export default {
       this.theme = themes[nextIndex]
     },
     uri(symbol) {
-      return `${appConfig.prefs.spriteDir}/icons.svg#icon-${symbol}`
+      return `${paths.sprite}/icons.svg#icon-${symbol}`
     }
   },
   async mounted() {

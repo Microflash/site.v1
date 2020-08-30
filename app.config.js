@@ -16,7 +16,6 @@ module.exports = {
   copyright: `Copyright ${new Date().getFullYear()} ${pkgAuthor}`,
   prefs: {
     editContext: `${pkgRepo.replace(/.git$/g, '')}/edit/release`,
-    spriteDir: '/assets/images',
     maxTocDepth: 3,
     outdationPeriod: 365 // in days
   },
@@ -26,7 +25,8 @@ module.exports = {
     search: {
       dir: './static',
       name: 'search.json'
-    }
+    },
+    sprite: '/assets/images'
   },
   head: {
     meta: [

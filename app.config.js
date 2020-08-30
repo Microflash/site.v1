@@ -15,14 +15,14 @@ module.exports = {
   maintainer: pkgAuthor,
   copyright: `Copyright ${new Date().getFullYear()} ${pkgAuthor}`,
   prefs: {
-    draftDir: '.archive/backlog/blog',
-    notesDir: '.archive/backlog/notes',
     editContext: `${pkgRepo.replace(/.git$/g, '')}/edit/release`,
     spriteDir: '/assets/images',
     maxTocDepth: 3,
     outdationPeriod: 365 // in days
   },
   paths: {
+    blog: '.archive/backlog/blog',
+    note: '.archive/backlog/notes',
     search: {
       dir: './static',
       name: 'search.json'

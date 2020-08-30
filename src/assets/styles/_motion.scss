@@ -16,16 +16,6 @@
   }
 }
 
-@mixin animate-property($name, $duration: 500ms, $timing-fn: ease-in-out) {
-  transition-property: $name;
-  transition-duration: $duration;
-  transition-timing-function: $timing-fn;
-
-  @media (print), (prefers-reduced-motion: reduce) {
-    transition-duration: 1ms;
-  }
-}
-
 // Dissolve transition
 
 .dissolve-enter-to,
@@ -70,6 +60,11 @@
 // Theme switch transition
 
 * {
-  @include animate-property(background-color, 300ms, ease-out);
-  @include animate-property(color, 300ms, ease-out);
+  transition-property: background-color, border-color, font-weight, stroke-width;
+  transition-duration: 400ms;
+  transition-timing-function: ease-in-out;
+
+  @media (print), (prefers-reduced-motion: reduce) {
+    transition-duration: 1ms;
+  }
 }

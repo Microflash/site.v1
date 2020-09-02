@@ -35,7 +35,7 @@
     "commander": "^6.1.0",
     "marked": "^1.1.1",
     "moment": "^2.27.0",
-    "netlify-cli": "^2.59.1",
+    "netlify-cli": "^2.59.3",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.1",
     "shx": "^0.3.2",

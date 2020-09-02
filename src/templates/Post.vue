@@ -1,22 +1,18 @@
 <template>
   <Layout>
-    <section class="hero">
+    <Hero>
       <div class="metadata">
-        <div class="metadata-content">
-          <div class="metadata-header">
-            <div class="metadata-author" v-for="author in $page.post.authors" :key="author.id">
-              <g-link :to="author.path">{{ author.name }}</g-link>
-            </div>
-            <div class="metadata-item" v-html="displayDate"></div>
-            <div class="metadata-item">&sim;{{ $page.post.timeToRead }} min read</div>
-          </div>
-          <h1 class="title">{{ $page.post.title }}</h1>
-          <div class="metadata-footer topics">
-            <span class="gap-ch" v-for="topic in $page.post.topics" :key="topic">{{ topic }}</span>
-          </div>
+        <div class="metadata-author" v-for="author in $page.post.authors" :key="author.id">
+          <g-link :to="author.path">{{ author.name }}</g-link>
         </div>
+        <div class="metadata-item" v-html="displayDate"></div>
+        <div class="metadata-item">&sim;{{ $page.post.timeToRead }} min read</div>
       </div>
-    </section>
+      <h1 class="title">{{ $page.post.title }}</h1>
+      <div class="topics">
+        <span class="gap-ch" v-for="topic in $page.post.topics" :key="topic">{{ topic }}</span>
+      </div>
+    </Hero>
     <main class="content">
       <ScrollIndicator />
       <Toc v-if="$page.post.headings.length > 0" :headers="$page.post.headings" />
@@ -94,6 +90,7 @@ query Blog ($id: ID!, $previousId: ID!, $nextId: ID!) {
 </page-query>
 
 <script>
+import Hero from '~/components/partials/Hero'
 import Toc from '~/components/Toc'
 import Sprite from '~/components/Sprite'
 import ScrollIndicator from '~/components/ScrollIndicator'
@@ -106,6 +103,7 @@ export default {
     }
   },
   components: {
+    Hero,
     Toc,
     Sprite,
     ScrollIndicator

@@ -1,10 +1,10 @@
 <template>
   <Layout>
-    <div class="hero">
+    <Hero>
       <h1 class="title">
         <span class="gap-ch-sm hidden-sm">&mdash;</span>Reflections on <br class="hidden-sm" />design and development <br class="hidden-sm" />by <g-link to="/profile/naiyer/">Naiyer Asif</g-link>
       </h1>
-    </div>
+    </Hero>
     <main class="content">
       <div class="card" v-for="post in $page.posts.edges" :key="post.id" @click="$router.push(post.node.path)">
         <div class="card-metadata">
@@ -48,6 +48,7 @@ query Blogs ($page: Int) {
 </page-query>
 
 <script>
+import Hero from '~/components/partials/Hero'
 import Pagination from '~/components/Pagination'
 import Sprite from '~/components/Sprite'
 
@@ -56,6 +57,7 @@ export default {
     title: 'Home'
   },
   components: {
+    Hero,
     Pagination,
     Sprite
   }

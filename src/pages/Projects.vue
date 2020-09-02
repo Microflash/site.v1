@@ -1,11 +1,9 @@
 <template>
   <Layout>
-    <div class="hero">
-      <div class="metadata-content">
-        <h1 class="title">Projects</h1>
-        <div class="subtitle">Tools, utilities and experiments</div>
-      </div>
-    </div>
+    <Hero>
+      <h1 class="title">Projects</h1>
+      <div class="subtitle">Tools, utilities and experiments</div>
+    </Hero>
     <main class="content">
       <article class="article">
         <dl>
@@ -38,12 +36,16 @@ query CompleteProjects {
 </page-query>
 
 <script>
+import Hero from '~/components/partials/Hero'
 
 export default {
   metaInfo() {
     return {
       title: 'Projects'
     }
+  },
+  components: {
+    Hero
   }
 }
 </script>

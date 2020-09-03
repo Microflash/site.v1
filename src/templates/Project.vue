@@ -9,16 +9,18 @@
       <div v-html="$page.project.content" class="article" />
     </main>
     <div class="sidekick">
-      <div class="sidekick-actions">
-        <a v-if="$page.project.editable" target="_blank" title="Edit this page" rel="noopener noreferrer" :href="editUrl">
-          <Sprite symbol="icon-edit" class="icon-rg" />
-        </a>
-        <a v-if="$page.project.toc" href="#table-of-contents" title="Table of Contents" class="is-visible-on-phone">
-          <Sprite symbol="icon-contents" class="icon-rg" />
-        </a>
-        <a href="#app" title="Back to top">
-          <Sprite symbol="icon-up" class="icon-rg" />
-        </a>
+      <div class="sidekick-wrapper">
+        <div class="sidekick-actions">
+          <a v-if="$page.project.editable" target="_blank" title="Edit this page" rel="noopener noreferrer" :href="editUrl">
+            <Sprite symbol="icon-edit" class="icon-rg" />
+          </a>
+          <a v-if="$page.project.toc" href="#table-of-contents" title="Table of Contents" class="is-visible-on-phone">
+            <Sprite symbol="icon-contents" class="icon-rg" />
+          </a>
+          <a href="#app" title="Back to top">
+            <Sprite symbol="icon-up" class="icon-rg" />
+          </a>
+        </div>
       </div>
     </div>
   </Layout>

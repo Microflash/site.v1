@@ -44,7 +44,7 @@
           <a target="_blank" rel="noopener noreferrer" title="Edit this page" :href="editUrl">
             <Sprite symbol="icon-edit" class="icon-rg" />
           </a>
-          <a href="#table-of-contents" title="Table of Contents">
+          <a v-if="$page.post.headings.length > 0" href="#table-of-contents" title="Table of Contents">
             <Sprite symbol="icon-contents" class="icon-rg" />
           </a>
           <a href="#app" title="Back to top">

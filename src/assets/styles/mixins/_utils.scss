@@ -98,12 +98,20 @@ $tappable-gapy: variables.$gap-xs;
 $tappable-background: variables.$bg-passive;
 
 @mixin tappable($radius: $tappable-radius, $gapx: $tappable-gapx, $gapy: $tappable-gapy) {
-  border-radius: $tappable-radius;
-  padding: $tappable-gapy $tappable-gapx;
+  border-radius: $radius;
+  padding: $gapy $gapx;
 
   &:focus,
   &:hover {
     background-color: $tappable-background;
     text-decoration: none;
   }
+}
+
+// Separator
+
+@mixin separator() {
+  content: variables.$symbol-separator;
+  @include mx(variables.$separator-gap);
+  opacity: variables.$separator-opacity;
 }

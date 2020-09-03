@@ -10,6 +10,7 @@
       </div>
       <h1 class="title">{{ $page.post.title }}</h1>
       <div class="topics">
+        <span class="gap-ch"><strong class="gap-ch">{{ $page.post.category }}</strong>on</span>
         <span class="gap-ch" v-for="topic in $page.post.topics" :key="topic">{{ topic }}</span>
       </div>
     </Hero>
@@ -77,6 +78,7 @@ query Blog ($id: ID!, $previousId: ID!, $nextId: ID!) {
     }
     topics
     content
+    category
     path
     timeToRead
     outdated

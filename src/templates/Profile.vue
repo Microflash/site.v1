@@ -9,9 +9,9 @@
         <div class="subtitle">a {{ $page.profile.role | lowerCase }} from {{ $page.profile.location }}</div>
       </div>
     </Hero>
+    <ScrollIndicator />
     <main class="content">
-      <ScrollIndicator />
-      <article v-html="$page.profile.content" />
+      <article class="article" v-html="$page.profile.content" />
     </main>
     <div class="sidekick">
       <div class="sidekick-wrapper">

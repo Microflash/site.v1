@@ -35,23 +35,6 @@
   margin-block: $value;
 }
 
-// Container
-
-$container-max-width: properties.$container-width;
-
-@mixin container($display: flex, $centered: false) {
-  display: $display;
-  flex-grow: 1;
-
-  @if $centered {
-    @include mx(auto);
-  }
-
-  position: relative;
-  width: 100%;
-  max-width: $container-max-width;
-}
-
 // Visibility
 
 @mixin hide($hidden: true, $display-fallback: unset) {

@@ -72,8 +72,9 @@ $bg-tip: var(--bg-tip) !default;
 $bg-warning: var(--bg-warning) !default;
 $bg-important: var(--bg-important) !default;
 
-$bg-prev: $bg-caution !default;
-$bg-next: $bg-warning !default;
+$bg-prev: theme.fade(theme.secondary(500), 0.96) !default;
+$bg-next: theme.fade(theme.secondary(600), 0.90) !default;
+$bg-mid: theme.fade(theme.secondary(700), 0.98) !default;
 
 @use '../../../node_modules/@microflash/remarkability/scss/variables' with (
   $enable-selection-background: true,

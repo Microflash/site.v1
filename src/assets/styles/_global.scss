@@ -1,21 +1,39 @@
 @use 'variables';
 @use 'properties';
-@use 'mixins/queries';
 @use 'mixins/utils';
-@use 'mixins/grid';
+@use 'mixins/layout';
+@use 'mixins/queries';
 
 // Containers
 
-body {
-  @include utils.container;
+$topics-font-size: variables.$font-xs;
+$topics-gapy: variables.$ch-sm; 
+$topics-gapx: variables.$ch-md;
+$topics-border: variables.$border;
+$topics-separator: variables.$symbol-separator;
+
+.is-flex {
+  display: flex;
+  flex-wrap: properties.$flex-wrap;
 }
 
-.layout {
-  width: inherit;
+.topics {
+  display: inline-block;
+  border-radius: 5rem;
+  border: 1px solid $topics-border;
+  @include utils.py($topics-gapy);
+  padding-right: $topics-gapy;
+  padding-left: $topics-gapx;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: $topics-font-size;
 
-  > * {
-    display: flex;
-    @include utils.px(properties.$space-rg);
+  .is-next {
+    margin-right: 1ch;
+  }
+
+  .is-mid {
+    @include utils.mx($topics-gapx);
   }
 }
 
@@ -29,6 +47,12 @@ a {
   &.active {
     font-weight: variables.$weight-bd;
   }
+
+  &.is-icon {
+    display: inline-flex;
+    align-items: center;
+    line-height: 0;
+  }
 }
 
 // Icons
@@ -38,7 +62,6 @@ a {
   stroke-linecap: round;
   stroke-linejoin: round;
   vertical-align: middle;
-  align-self: center;
   fill: currentColor;
   fill-opacity: variables.$fill-opacity;
 }
@@ -57,38 +80,15 @@ a {
 
 // Grids
 
-.grid-sm {
-  @include grid.grid($width: variables.$grid-sm);
+.footer-grid {
+  @include layout.grid($width: variables.$grid-sm, $gap: properties.$space-rg);
 }
 
-.sidekick-navigation {
-  @include grid.grid($width: 48%, $height: min-content, $strategy: auto-fit);
-}
-
-// Typography
-
-.title {
-  font-size: variables.$font-xl;
-}
-
-.subtitle {
-  font-size: variables.$font-md;
-  color: variables.$text-passive;
-}
-
-.is-muted {
-  color: variables.$text-passive;
-}
+// Colors
 
 .is-primary {
   color: variables.$link;
   border-color: variables.$link;
-}
-
-.is-warning {
-  $red: hsl(350, 70%, 50%);
-  color: $red;
-  border-color: $red;
 }
 
 // Gap

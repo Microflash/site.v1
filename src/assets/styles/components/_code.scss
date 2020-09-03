@@ -53,7 +53,7 @@ $code-gapx-neg: properties.$negative-space-rg;
     @include utils.mx(auto);
     z-index: 5;
     text-align: right;
-    margin-bottom: -(variables.$gap-rg);
+    margin-bottom: -(variables.$gap-sm);
     padding-top: 0.5em;
     padding-right: 0.5em;
     color: variables.$text-passive;

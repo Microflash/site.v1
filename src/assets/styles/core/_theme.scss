@@ -113,9 +113,9 @@ $black: mono(900);
   --bg-body: #{$bg-base};
   --bg-active: #{mix($black, $bg-base, 20%)};
   --bg-passive: #{mix($black, primary(900), 33%)};
-  --bg-caution: hsl(51, 23%, 24%);
-  --bg-tip: hsl(160, 34%, 22%);
-  --bg-warning: hsl(4, 56%, 28%);
+  --bg-caution: hsl(49, 20%, 20%);
+  --bg-tip: hsl(160, 30%, 19%);
+  --bg-warning: hsl(4, 50%, 23%);
   --bg-important: hsl(228, 41%, 26%);
 
   --weight-rg: 350;

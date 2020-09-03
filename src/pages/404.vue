@@ -6,7 +6,7 @@
         &larr; Return to <g-link to="/">Home</g-link>.
       </div>
     </Hero>
-    <main class="content">
+    <main>
       <figure>
         <NotFound />
       </figure>

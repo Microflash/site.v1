@@ -2,7 +2,6 @@ const path = require('path')
 const fs = require('fs')
 const dotenv = require('dotenv')
 const { google } = require('googleapis')
-const { prefs, paths } = require('./app.config')
 
 dotenv.config()
 
@@ -21,39 +20,20 @@ const analytics = google.analytics({
   auth: jwtAuth
 })
 
-const getReport = () => {
-  return analytics.data.ga.get({
+async function getReport() {
+  return await analytics.data.ga.get({
     'ids': `ga:${process.env.VIEW_ID}`,
     'dimensions': 'ga:pageTitle,ga:pagePath',
     'metrics': 'ga:pageviews',
     'filters': 'ga:pagePathLevel1=@/blog/',
     'start-date': '30daysAgo',
     'end-date': 'today',
-    'max-results': prefs.maxPopularPosts,
+    'max-results': 9,
     'sort': '-ga:pageviews'
   })
 }
 
-const getPopularPosts = () => {
-  const reportPath = path.resolve(process.cwd(), paths.report.dir, paths.report.name)
-  const reportExists = fs.existsSync(reportPath)
-
-  if (process.env.NODE_ENV === 'production' || !reportExists) {
-    getReport().then(res => {
-      writeToFile('analytics report', paths.report, res.data.rows.map(entry => {
-        return {
-          title: entry[0].slice(0, -13),
-          path: entry[1],
-          views: entry[2]
-        }
-      }))
-    }).catch(err => console.error(err))
-  }
-
-  return require(reportPath)
-}
-
-const writeToFile = (target, output, data) => {
+function writeToFile(target, output, data) {
   const outputPath = path.resolve(process.cwd(), output.dir)
   const outputPathExists = fs.existsSync(outputPath)
   const fileName = output.name.endsWith('.json') ? output.name : `${output.name}.json`
@@ -70,6 +50,6 @@ const writeToFile = (target, output, data) => {
 }
 
 module.exports = {
-  getPopularPosts,
+  getReport,
   writeToFile
 }

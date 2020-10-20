@@ -2,11 +2,11 @@ const dayjs = require('dayjs')
 const customParseFormat = require('dayjs/plugin/customParseFormat')
 dayjs.extend(customParseFormat)
 
-const { getPopularPosts, writeToFile } = require('./app.server')
+const { writeToFile } = require('./app.server')
 const { prefs, paths } = require('./app.config')
 const projects = require('./content/projects')
+const report = require('./static/report.json')
 
-const popularPosts = getPopularPosts()
 const outdationDate = prefs.outdationPeriod ? dayjs().clone().subtract(prefs.outdationPeriod, 'days').startOf('day') : null
 
 module.exports = api => {
@@ -38,7 +38,7 @@ module.exports = api => {
     const popularBlogPosts = addCollection({
       typeName: 'PopularBlog'
     })
-    popularPosts.forEach(entry => popularBlogPosts.addNode(entry))
+    report.popular.forEach(entry => popularBlogPosts.addNode(entry))
   })
 
   api.createPages(async ({ graphql, createPage }) => {

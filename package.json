@@ -1,21 +1,19 @@
 {
   "name": "microflash",
-  "version": "0.14.0",
+  "version": "0.13.0",
   "private": true,
   "description": "Reflections on design and development by Naiyer Asif",
   "repository": "https://github.com/Microflash/site.git",
   "author": "Naiyer Asif",
   "license": "MIT",
   "scripts": {
-    "build": "gridsome build",
+    "build": "node bin/report.js && gridsome build",
     "start": "gridsome develop",
     "status": "gridsome info",
     "purge": "shx rm -rf public .cache src/.temp static/search.json",
     "new:post": "node bin/content.js --content post",
     "new:note": "node bin/content.js --content note",
-    "sprite": "npm run sprite:backup && npm run sprite:build",
-    "sprite:backup": "shx cp static/assets/images/icons.svg .archive/backups/icons.svg",
-    "sprite:build": "spritely --input .archive/svg/icons --output static/assets/images/icons.svg --prefix \"icon-\""
+    "new:icons": "shx cp static/assets/images/icons.svg .archive/backups/icons.svg && spritely --input .archive/svg/icons --output static/assets/images/icons.svg --prefix \"icon-\""
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.2",
@@ -37,12 +35,12 @@
     "autoprefixer": "^9.8.6",
     "chrono-node": "^2.1.8",
     "commander": "^6.1.0",
-    "dayjs": "^1.9.3",
+    "dayjs": "^1.9.1",
     "dotenv": "^8.2.0",
-    "googleapis": "^61.0.0",
+    "googleapis": "^60.0.1",
     "marked": "^1.2.0",
-    "sass": "^1.27.0",
-    "sass-loader": "^10.0.3",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
     "shx": "^0.3.2",
     "svg-to-vue-component": "^0.3.8",
     "vue-scroll-indicator": "^0.1.3"

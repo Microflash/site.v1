@@ -1,6 +1,7 @@
 ---
 title: 'Building Docker images for Java applications'
 date: 2020-01-25 18:37:25
+published: 2020-01-25 18:37:25
 authors: [naiyer]
 topics: [docker, java, maven]
 ---

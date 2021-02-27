@@ -1,6 +1,7 @@
 ---
 title: 'Protecting endpoints with Spring Security Resource Server'
 date: 2020-11-15 11:38:57
+published: 2020-11-15 11:38:57
 authors: [naiyer]
 topics: [spring, security, oauth2]
 ---

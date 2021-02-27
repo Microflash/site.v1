@@ -1,6 +1,7 @@
 ---
 title: 'Syncing with a massive Git upstream'
 date: 2019-12-23 14:23:12
+published: 2019-12-23 14:23:12
 authors: [naiyer]
 topics: [git]
 ---

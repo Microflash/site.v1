@@ -1,6 +1,7 @@
 ---
 title: 'Retrying on failure with Resilience4J and Aspects'
 date: 2020-09-26 15:17:06
+published: 2020-09-26 15:17:06
 authors: [naiyer]
 topics: [retry, resilience4j, aspectj]
 ---

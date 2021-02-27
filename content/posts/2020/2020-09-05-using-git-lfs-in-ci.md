@@ -1,6 +1,7 @@
 ---
 title: 'Using Git LFS in CI'
 date: 2020-09-05 12:31:38
+published: 2020-09-05 12:31:38
 authors: [naiyer]
 topics: [git, lfs]
 ---

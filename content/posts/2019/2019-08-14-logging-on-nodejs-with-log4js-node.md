@@ -1,7 +1,7 @@
 ---
 title: 'Logging on Node.js with log4js-node'
-date: 2019-08-14 17:11:09
-updated: 2019-09-22 20:19:17
+date: 2019-09-22 20:19:17
+published: 2019-08-14 17:11:09
 authors: [naiyer]
 topics: [nodejs, express, log4js]
 ---

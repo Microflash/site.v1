@@ -1,6 +1,7 @@
 ---
 title: 'Skipping the GitLab CI'
 date: 2020-08-04 11:34:58
+published: 2020-08-04 11:34:58
 category: 'note'
 authors: [naiyer]
 topics: [gitlab ci]

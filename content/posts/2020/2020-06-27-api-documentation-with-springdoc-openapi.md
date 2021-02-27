@@ -1,6 +1,7 @@
 ---
 title: 'API Documentation with springdoc-openapi'
 date: 2020-06-27 00:30:07
+published: 2020-06-27 00:30:07
 authors: [naiyer]
 topics: [spring, springdoc, openapi]
 ---

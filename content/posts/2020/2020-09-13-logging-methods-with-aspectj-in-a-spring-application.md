@@ -1,6 +1,7 @@
 ---
 title: 'Logging methods with AspectJ in a Spring application'
 date: 2020-09-13 21:01:49
+published: 2020-09-13 21:01:49
 authors: [naiyer]
 topics: [aspectj, logging, spring]
 ---

@@ -1,6 +1,7 @@
 ---
 title: 'Error handling for a Spring-based REST API'
 date: 2020-07-26 00:35:25
+published: 2020-07-26 00:35:25
 authors: [naiyer]
 topics: [spring, security, rest]
 ---

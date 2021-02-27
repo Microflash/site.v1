@@ -1,6 +1,7 @@
 ---
 title: 'Cleaning up Docker resources'
 date: 2020-10-22 23:59:08
+published: 2020-10-22 23:59:08
 category: 'note'
 authors: [naiyer]
 topics: [docker]

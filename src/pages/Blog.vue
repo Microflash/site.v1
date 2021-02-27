@@ -11,7 +11,7 @@
         <div class="text-sm text-neutral separated">
           <strong class="capitalize">{{ post.node.category }}</strong>
           <span>&sim;{{ post.node.timeToRead }} min</span>
-          <time v-html="post.node.date" />
+          <time v-html="post.node.published" />
         </div>
         <g-link class="block font-bold group-hover:text-deter group-hover:underline text-md my-xs" :to="post.node.path">{{ post.node.title }}</g-link>
         <div class="text-sm" v-html="excerpt(post.node.excerpt)" />
@@ -25,7 +25,7 @@
 
 <page-query>
 query Blogs ($page: Int) {
-  posts: allBlog (sortBy: "date", order: DESC, perPage: 10, page: $page) @paginate {
+  posts: allBlog (sortBy: "published", order: DESC, perPage: 10, page: $page) @paginate {
     totalCount
     pageInfo {
       totalPages
@@ -35,7 +35,7 @@ query Blogs ($page: Int) {
       node {
         id
         title
-        date (format: "MMM D, Y")
+        published (format: "MMM D, Y")
         timeToRead
         category
         topics

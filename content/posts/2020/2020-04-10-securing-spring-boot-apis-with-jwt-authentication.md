@@ -1,7 +1,7 @@
 ---
 title: 'Securing Spring Boot APIs with JWT Authentication'
-date: 2020-04-10 21:35:25
-updated: 2020-11-05 19:31:55
+date: 2020-11-05 19:31:55
+published: 2020-04-10 21:35:25
 authors: [naiyer]
 topics: [spring, security, jwt]
 ---

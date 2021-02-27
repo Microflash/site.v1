@@ -1,6 +1,7 @@
 ---
 title: 'Querying Postgres with Spring Data and Micronaut Data'
 date: 2020-04-05 16:29:09
+published: 2020-04-05 16:29:09
 authors: [naiyer]
 topics: [spring, micronaut, postgres]
 ---

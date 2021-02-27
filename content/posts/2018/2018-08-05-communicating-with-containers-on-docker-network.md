@@ -1,7 +1,7 @@
 ---
 title: 'Communicating with containers on Docker network'
-date: 2018-08-05 12:06:01
-updated: 2020-03-08 21:22:13
+date: 2020-03-08 21:22:13
+published: 2018-08-05 12:06:01
 authors: [naiyer]
 topics: [docker, micronaut, angular]
 ---

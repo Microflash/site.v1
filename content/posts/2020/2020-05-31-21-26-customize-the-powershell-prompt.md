@@ -1,6 +1,7 @@
 ---
 title: 'Customize the PowerShell prompt'
 date: 2020-05-31 21:26:42
+published: 2020-05-31 21:26:42
 category: 'note'
 authors: [naiyer]
 topics: [powershell]

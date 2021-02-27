@@ -1,7 +1,7 @@
 ---
 title: 'Persisting documents with MongoRepository'
-date: 2019-07-08 11:12:13
-updated: 2020-10-26 10:10:01
+date: 2020-10-26 10:10:01
+published: 2019-07-08 11:12:13
 authors: [naiyer]
 topics: [spring, data, mongodb]
 ---

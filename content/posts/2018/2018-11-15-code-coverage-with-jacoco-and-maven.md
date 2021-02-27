@@ -1,7 +1,7 @@
 ---
 title: 'Code Coverage with JaCoCo and Maven'
-date: 2018-11-15 21:09:32
-updated: 2019-11-12 19:14:45
+date: 2019-11-12 19:14:45
+published: 2018-11-15 21:09:32
 authors: [naiyer]
 topics: [java, maven, jacoco]
 ---

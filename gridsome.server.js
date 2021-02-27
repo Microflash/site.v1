@@ -15,16 +15,12 @@ module.exports = api => {
 
   api.onCreateNode(options => {
     if (options.internal.typeName === 'Blog') {
-      if (!options.updated) {
-        options.updated = options.date
-      }
-
       if (!options.category) {
         options.category = 'guide'
       }
 
       if (typeof(options.status) == 'undefined') {
-        options.status = outdationDate && dayjs(options.updated).isBefore(outdationDate) ? 'outdated' : 'fresh'
+        options.status = outdationDate && dayjs(options.date).isBefore(outdationDate) ? 'outdated' : 'fresh'
       }
     }
     

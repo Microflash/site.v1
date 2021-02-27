@@ -59,7 +59,7 @@ query Blog ($id: ID!, $previousId: ID!, $nextId: ID!) {
   post: blog (id: $id) {
     title
     date (format: "MMM D, Y")
-    updated (format: "MMM D, Y")
+    published (format: "MMM D, Y")
     fileInfo {
       path
     }
@@ -114,8 +114,8 @@ export default {
   },
   computed: {
     displayDate() {
-      const published = `Published <time class="font-bold">${this.$page.post.date}</time>`
-      return !this.$page.post.hasOwnProperty('updated') ? published : (this.$page.post.updated !== this.$page.post.date ? `Updated <time class="font-bold">${this.$page.post.updated}</time>` : published); 
+      const prefix = this.$page.post.date === this.$page.post.published ? 'Published' : 'Updated'
+      return `${prefix} <time class="font-bold">${this.$page.post.date}</time>`
     },
     editUrl() {
       const editContext = appConfig.editConfig && appConfig.editConfig.Post ? appConfig.editConfig.Post : appConfig.prefs.editContext

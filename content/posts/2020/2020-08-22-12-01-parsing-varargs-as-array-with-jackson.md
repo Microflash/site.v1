@@ -1,6 +1,7 @@
 ---
 title: 'Parsing varargs as array with Jackson'
 date: 2020-08-22 12:01:03
+published: 2020-08-22 12:01:03
 category: 'note'
 authors: [naiyer]
 topics: [java, serialization, jackson]

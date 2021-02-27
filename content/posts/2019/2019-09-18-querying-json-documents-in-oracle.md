@@ -1,7 +1,7 @@
 ---
 title: 'Querying JSON documents in Oracle'
-date: 2019-09-18 22:11:11
-updated: 2020-03-14 00:48:09
+date: 2020-03-14 00:48:09
+published: 2019-09-18 22:11:11
 authors: [naiyer]
 topics: [oracle, json]
 ---

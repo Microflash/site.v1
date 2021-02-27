@@ -1,7 +1,7 @@
 ---
 title: 'Developing an API with Express and Postgres'
-date: 2019-08-19 21:43:03
-updated: 2020-02-06 23:26:09
+date: 2020-02-06 23:26:09
+published: 2019-08-19 21:43:03
 authors: [naiyer]
 topics: [express, postgres, typescript]
 ---

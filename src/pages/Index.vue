@@ -10,7 +10,7 @@
     <main class="container px-far-base">
       <div class="separated">
         <strong><Sprite symbol="icon-new" class="icon text-urge mr-base" />Latest</strong>
-        <time class="text-sm text-neutral" v-html="mostRecent.node.date" />
+        <time class="text-sm text-neutral" v-html="mostRecent.node.published" />
       </div>
       <div class="group cursor-pointer max-sm" style="margin-left:3rem" @click="$router.push(mostRecent.node.path)">
         <g-link class="block font-bold text-md group-hover:text-deter group-hover:underline my-xs" :to="mostRecent.node.path">{{ mostRecent.node.title }}</g-link>
@@ -25,7 +25,7 @@
       <p class="font-bold"><Sprite symbol="icon-recent" class="icon text-inform mr-base" />Recent posts</p>
       <div class="group cursor-pointer mb-md" style="margin-left:3rem" v-for="latest in recent" :key="latest.id" @click="$router.push(latest.node.path)">
         <div class="text-sm text-neutral separated">
-          <time v-html="latest.node.date" />
+          <time v-html="latest.node.published" />
         </div>
         <g-link class="block font-bold group-hover:text-deter group-hover:underline" :to="latest.node.path">{{ latest.node.title }}</g-link>
       </div>
@@ -47,13 +47,13 @@ query {
       }
     }
   }
-  latestPosts: allBlog(sortBy: "date", order: DESC, limit: 10) {
+  latestPosts: allBlog(sortBy: "published", order: DESC, limit: 10) {
     edges {
       node {
         id
         title
         path
-        date (format: "MMM D, Y")
+        published (format: "MMM D, Y")
         excerpt
       }
     }

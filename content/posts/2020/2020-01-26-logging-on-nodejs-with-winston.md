@@ -1,6 +1,7 @@
 ---
 title: 'Logging on Node.js with winston'
 date: 2020-01-26 17:11:09
+published: 2020-01-26 17:11:09
 authors: [naiyer]
 topics: [nodejs, express, winston]
 ---

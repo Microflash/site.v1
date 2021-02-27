@@ -1,7 +1,7 @@
 ---
 title: 'Uploading files with Spring Boot and Express'
-date: 2019-11-08 16:06:33
-updated: 2020-03-18 21:50:11
+date: 2020-03-18 21:50:11
+published: 2019-11-08 16:06:33
 authors: [naiyer]
 topics: [express, spring, angular]
 ---

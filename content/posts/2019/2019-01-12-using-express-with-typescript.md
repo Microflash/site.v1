@@ -1,7 +1,7 @@
 ---
 title: 'Using Express with TypeScript'
-date: 2019-01-12 10:11:13
-updated: 2020-02-06 22:30:55
+date: 2020-02-06 22:30:55
+published: 2019-01-12 10:11:13
 authors: [naiyer]
 topics: [express, typescript]
 ---

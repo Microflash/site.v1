@@ -1,6 +1,7 @@
 ---
 title: 'API Documentation with Springfox 3'
 date: 2020-09-05 17:28:11
+published: 2020-09-05 17:28:11
 authors: [naiyer]
 topics: [spring, swagger, springfox 3]
 ---

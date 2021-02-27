@@ -1,6 +1,7 @@
 ---
 title: 'Request logging with morgan'
 date: 2019-08-13 14:11:09
+published: 2019-08-13 14:11:09
 authors: [naiyer]
 topics: [express, nodejs, morgan]
 ---

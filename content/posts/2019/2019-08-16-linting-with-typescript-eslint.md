@@ -1,7 +1,7 @@
 ---
 title: 'Linting with TypeScript ESLint'
-date: 2019-08-16 16:23:12
-updated: 2020-02-06 22:51:18
+date: 2020-02-06 22:51:18
+published: 2019-08-16 16:23:12
 authors: [naiyer]
 topics: [typescript, eslint]
 ---
